@@ -22,6 +22,11 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
+    public List<Product> findProduct() {
+        return repository.findAllProduct();
+    }
+
+    @Override
     @Transactional(readOnly = true)
     public Optional<Product> findById(Long id) {
         return repository.findById(id);

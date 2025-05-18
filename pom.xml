@@ -18,6 +18,7 @@
 
     <modules>
         <module>ms-productos</module>
+        <module>ms-invetario</module>
     </modules>
 
     <properties>

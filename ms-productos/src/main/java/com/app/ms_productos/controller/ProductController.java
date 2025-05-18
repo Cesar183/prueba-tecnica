@@ -57,4 +57,9 @@ public class ProductController {
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
     }
+
+    @GetMapping("/allProducts")
+    public ResponseEntity<List<Product>> findByIdProduct(){
+        return ResponseEntity.status(HttpStatus.OK).body(service.findProduct());
+    }
 }
