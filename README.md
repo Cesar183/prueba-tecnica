@@ -16,19 +16,33 @@ Cada microservicio sigue una arquitectura de microservicios independiente basada
 
 ### Prerrequisitos
 
-- Java 17.
-- Maven instalado.
+- Java 17
+- Maven instalado
+- Mysql
+- PostgreSQL
 
-### Pasos para ejecutar
+## Pasos para ejecutar
 
-1. Clonar el repositorio:
+Clonar el repositorio:
 
 ```bash
 git clone https://github.com/Cesar183/prueba-tecnica.git
 ```
 
-## Ejecución
-1. Navega a cada microservicio:
+### Ejecución
+
+1. Crear base de datos Productos.
+   Ingresar a MySql y ejecutar:
+   ```bash
+   create database productos_db;
+   ```
+2. Crear base de datos Inventario.
+   Ingresar a PostgreSQL y ejecutar:
+   ```bash
+   create database inventario_db;
+   ```
+   
+3. Navegar a cada microservicio y luego compilar:
    ```bash
    cd ms-productos
    mvn spring-boot:run
@@ -36,12 +50,13 @@ git clone https://github.com/Cesar183/prueba-tecnica.git
    cd ms-invetario
    mvn spring-boot:run
    ```
-
-### Acceder a las APIs:
-
+4. Ingresar a Postman.
+   Ejecutar los siguientes Enpoints:
+    ```bash
     Productos: http://localhost:8001/app/productos
-
+   
     Inventario: http://localhost:8002/app/inventario
+      ```
 
 #### Documentación Swagger UI:
 
