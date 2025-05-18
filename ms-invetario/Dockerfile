@@ -1,6 +1,6 @@
 FROM eclipse-temurin:17-jre-alpine
 
-EXPOSE 8001
+EXPOSE 8002
 
 WORKDIR /root
 
